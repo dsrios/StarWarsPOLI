@@ -1,6 +1,7 @@
 
 body {
 background: rgb(22, 31, 33);
+background-image:url("galaxy.jpg");
 }
 
 .mg {
@@ -13,4 +14,27 @@ background: rgb(22, 31, 33);
 
 .movie-img {
   width: 100%;
+}
+
+#table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table1 td, #table1 th {
+  border: 1px solid #ddd;
+padding: 8px;
+}
+  
+  #table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table1 td, #table1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 }
