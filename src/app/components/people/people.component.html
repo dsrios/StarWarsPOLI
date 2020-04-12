@@ -1,0 +1,6 @@
+<app-loader *ngIf="peopleResults.length === 0; else dataRender"></app-loader>
+<ng-template #dataRender>
+    <pre>
+        {{ peopleResults  | json}}
+    </pre>
+</ng-template>
