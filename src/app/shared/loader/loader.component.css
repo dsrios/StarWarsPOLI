@@ -1,0 +1,7 @@
+.loader {
+    display: grid;
+    place-content: center;
+    margin-top: auto;
+    height: 90%;
+    max-height: 90%;
+}

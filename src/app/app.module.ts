@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,12 +10,22 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 // Importar modulos de material
 import { MatToolbar } from '@angular/material/toolbar';
+import { MatSpinner } from '@angular/material/progress-spinner';
+
+
+// Importar nuevos componentes
 import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
 
+// Agregar el modulo de material que se vaya a usar
 const MATERIAL_COMPONENTS = [
-  MatToolbar
-]
+  MatToolbar,
+  MatSpinner
+];
+
+// Importar servicio
+import { PeopleService } from './shared/services/people.service';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +34,16 @@ const MATERIAL_COMPONENTS = [
     NavbarComponent,
     MATERIAL_COMPONENTS,
     FilmsComponent,
-    PeopleComponent
+    PeopleComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
