@@ -26,6 +26,7 @@ const MATERIAL_COMPONENTS = [
 // Importar servicio
 import { PeopleService } from './shared/services/people.service';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     MATERIAL_COMPONENTS,
     FilmsComponent,
     PeopleComponent,
-    LoaderComponent
+    LoaderComponent,
+    PlanetsComponent
   ],
   imports: [
     BrowserModule,
