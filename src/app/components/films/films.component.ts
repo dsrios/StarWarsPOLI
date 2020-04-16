@@ -9,7 +9,7 @@ export class FilmsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {  
   }
 
 }
