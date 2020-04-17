@@ -46,9 +46,9 @@ import { PlanetsComponent } from './components/planets/planets.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
- 
-providers: [PeopleService],
-/* providers: [FilmsService], */
-  bootstrap: [AppComponent]
+providers:[
+PeopleService,
+FilmsService],
+ bootstrap: [AppComponent]
 })
 export class AppModule { }
