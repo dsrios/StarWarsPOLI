@@ -5,24 +5,23 @@ import { HttpClient } from "@angular/common/http";
 // @Injectable({
 //   providedIn: 'root'
 // })
-
 export class FilmsService {
   constructor(private http: HttpClient) {}
-  /* url: "https://swapi.co/api/films/" */
+
   URL = "https://swapi.py4e.com/api/films/";
   /**
-   * /films/ -> get all the films resources
-   * /films/:idEpisode/ -> get a specific films resource
-   * /films/schema/ -> view the JSON schema for this resource
+   * /people/ -> get all the people resources
+   * /people/:id/ -> get a specific people resource
+   * /people/schema/ -> view the JSON schema for this resource
    * name -> Search Fields
    */
 
-  getAllfilms() {
+  getAllFilms() {
     return this.http.get(this.URL);
   }
 
-  getfilmsById(idEpisode: number) {
-    return this.http.get(`${this.URL}${ idEpisode}`);
+  getFilmsById(id: number) {
+    return this.http.get(`${this.URL}${id}`);
   }
 
   getNextPage(nextUrl: string) {

@@ -14,8 +14,8 @@ import { MatSpinner } from '@angular/material/progress-spinner';
 
 
 // Importar nuevos componentes
-import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
+import { FilmsComponent } from './components/films/films.component';
 
 // Agregar el modulo de material que se vaya a usar
 const MATERIAL_COMPONENTS = [
@@ -46,7 +46,9 @@ import { PlanetsComponent } from './components/planets/planets.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [PeopleService],
+ 
+providers: [PeopleService],
+/* providers: [FilmsService], */
   bootstrap: [AppComponent]
 })
 export class AppModule { }

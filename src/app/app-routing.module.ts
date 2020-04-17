@@ -8,7 +8,6 @@ import { PeopleComponent } from './components/people/people.component';
 import {PlanetsComponent}from './components/planets/planets.component';
 
 const routes: Routes = [
-  //{ path: 'films', component: AppComponent },
   { path: 'films', component: FilmsComponent },
   { path: 'people', component: PeopleComponent },
   { path: 'planets', component: PlanetsComponent },
