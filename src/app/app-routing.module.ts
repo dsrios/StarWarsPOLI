@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // componentes
-
 import { PeopleComponent } from './components/people/people.component';
-import {PlanetsComponent}from './components/planets/planets.component';
+import {PlanetsComponent} from './components/planets/planets.component';
 import { FilmsComponent } from './components/films/films.component';
-import { VehiclesComponent }from './components/vehicles/vehicles.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 const routes: Routes = [
   { path: 'people', component: PeopleComponent },
