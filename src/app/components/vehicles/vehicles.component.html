@@ -1,0 +1,7 @@
+<p>carlos leal</p>
+<app-loader *ngIf="vehiclesResults.length === 0; else dataRender"></app-loader>
+<ng-template #dataRender>
+    <pre>
+        {{ vehiclesResults  | json}}
+    </pre>
+</ng-template>
