@@ -1,7 +1,8 @@
-//componente films
+//componente films David Orozco
 
 import { Component, OnInit } from '@angular/core';
 import { FilmsService } from './../../shared/services/films.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-films',
@@ -10,7 +11,8 @@ import { FilmsService } from './../../shared/services/films.service';
 })
 export class FilmsComponent implements OnInit {
 
-  filmsResults: Array<any> = [];
+  /* filmsResults: Array<any> = []; */
+  filmsResults: Observable<Film>=[];
 
   constructor( private filmsService: FilmsService ) { }
 
