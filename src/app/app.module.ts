@@ -51,7 +51,8 @@ import { VehiclesService } from './shared/services/vehicles.service';
   ],
 providers:[
 PeopleService,
-FilmsService],
+FilmsService,
+VehiclesService],
  bootstrap: [AppComponent]
 })
 export class AppModule { }
