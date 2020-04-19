@@ -11,8 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class FilmsComponent implements OnInit {
 
-  /* filmsResults: Array<any> = []; */
-  filmsResults: Observable<Film>=[];
+  filmsResults: Array<any> = [];
+  /* filmsResults: Observable<Film>=[]; */
 
   constructor( private filmsService: FilmsService ) { }
 

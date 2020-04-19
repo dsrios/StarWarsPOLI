@@ -25,8 +25,8 @@ export class FilmsService {
     return this.http.get(this.URL);
   }
 
-  getFilmsById(id: number): Observable<Film> {
-    return this.http.get<Film>(`${this.URL}${id}?format=json`).pipe(
+  getFilmsById(id: number){
+    return this.http.get(`${this.URL}${id}?format=json`).pipe(
                 catchError(this.handleError)
               );
   }
