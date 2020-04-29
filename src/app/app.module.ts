@@ -14,8 +14,9 @@ import { MatSpinner } from '@angular/material/progress-spinner';
 
 
 // Importar nuevos componentes
-import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
+import { FilmsComponent } from './components/films/films.component';
+import { VehiclesComponent} from './components/vehicles/vehicles.component';
 
 // Agregar el modulo de material que se vaya a usar
 const MATERIAL_COMPONENTS = [
@@ -25,7 +26,10 @@ const MATERIAL_COMPONENTS = [
 
 // Importar servicio
 import { PeopleService } from './shared/services/people.service';
+import { FilmsService } from './shared/services/films.service';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { PlanetsComponent } from './components/planets/planets.component';
+import { VehiclesService } from './shared/services/vehicles.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { LoaderComponent } from './shared/loader/loader.component';
     MATERIAL_COMPONENTS,
     FilmsComponent,
     PeopleComponent,
-    LoaderComponent
+    LoaderComponent,
+    PlanetsComponent,
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,10 @@ import { LoaderComponent } from './shared/loader/loader.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [PeopleService],
-  bootstrap: [AppComponent]
+providers:[
+PeopleService,
+FilmsService,
+VehiclesService],
+ bootstrap: [AppComponent]
 })
 export class AppModule { }
