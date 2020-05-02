@@ -6,102 +6,31 @@
     <title>PELICULAS</title>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   </head>
   <body>
  <p>David Orozco</p>
- <!--Para la proxima entrega del componente films David Orozco-->
-    <!-- <app-loader *ngIf="filmsResults.length === 0; else dataRender"></app-loader>
-    <ng-template #dataRender>
+    <app-loader *ngIf="filmsResults.length === 0; else dataRender"></app-loader>
+   <!-- <ng-template #dataRender>
         <pre>
-        {{ filmsResults  | json}}
+         {{ filmsResults  | json}}
     </pre>
-    </ng-template> -->
+    </ng-template>-->
 <div class ="contenedor">
-		   <div class="contenedor_tarjeta"> 
-            <a href="#">
-                <figure>
-                 <img class= "responsive-img movie-img" src="./assets/imgMovie/the-last-jedi.jpg">
-                           <figcaption class="trasera">
-                             <p>{{''}}</p>
-                           </figcaption>
-                </figure>
-            </a>
-        </div>
-		   <div class="contenedor_tarjeta"> 
-            <a href="#">
-                <figure>
-                 <img class= "responsive-img movie-img" src="./assets/imgMovie/the-rise-of-skywalker.jpg">
-                           <figcaption class="trasera">
-                             <p>{{''}}</p>
-                           </figcaption>
-                </figure>
-            </a>
-        </div>
       <div class="contenedor_tarjeta"> 
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/a-new-hope.jpg">
+				     <br>
+                  <span class="card-title grey lighten-4">A New Hope Episode 4</span>
                          <figcaption class="trasera">
-                             <p>{{'{
-                                "title": "A New Hope",
-                                "episode_id": 4,
-								"director": "George Lucas",
-                                "producer": "Gary Kurtz, Rick McCallum",
-                                "release_date": "1977-05-25",
-                                "created": "2014-12-10T14:23:31.880000Z",
-                                "edited": "2014-12-20T19:49:45.256000Z",
-								"characters": [
-                                "https://swapi.py4e.com/api/people/1/",
-                                "https://swapi.py4e.com/api/people/2/",
-                                "https://swapi.py4e.com/api/people/3/",
-                                "https://swapi.py4e.com/api/people/4/",
-                                "https://swapi.py4e.com/api/people/5/",
-                                "https://swapi.py4e.com/api/people/6/",
-                                "https://swapi.py4e.com/api/people/7/",
-                                "https://swapi.py4e.com/api/people/8/",
-                                "https://swapi.py4e.com/api/people/9/",
-                                "https://swapi.py4e.com/api/people/10/",
-                                "https://swapi.py4e.com/api/people/12/",
-                                "https://swapi.py4e.com/api/people/13/",
-                                "https://swapi.py4e.com/api/people/14/",
-                                "https://swapi.py4e.com/api/people/15/",
-                                "https://swapi.py4e.com/api/people/16/",
-                                "https://swapi.py4e.com/api/people/18/",
-                                "https://swapi.py4e.com/api/people/19/",
-                                "https://swapi.py4e.com/api/people/81/"
-                              ],
-                              "planets": [
-                                "https://swapi.py4e.com/api/planets/1/",
-                                "https://swapi.py4e.com/api/planets/2/",
-                                "https://swapi.py4e.com/api/planets/3/"
-                              ],
-                              "starships": [
-                                "https://swapi.py4e.com/api/starships/2/",
-                                "https://swapi.py4e.com/api/starships/3/",
-                                "https://swapi.py4e.com/api/starships/5/",
-                                "https://swapi.py4e.com/api/starships/9/",
-                                "https://swapi.py4e.com/api/starships/10/",
-                                "https://swapi.py4e.com/api/starships/11/",
-                                "https://swapi.py4e.com/api/starships/12/",
-                                "https://swapi.py4e.com/api/starships/13/"
-                              ],
-                              "vehicles": [
-                                "https://swapi.py4e.com/api/vehicles/4/",
-                                "https://swapi.py4e.com/api/vehicles/6/",
-                                "https://swapi.py4e.com/api/vehicles/7/",
-                                "https://swapi.py4e.com/api/vehicles/8/"
-                              ],
-                              "species": [
-                                "https://swapi.py4e.com/api/species/1/",
-                                "https://swapi.py4e.com/api/species/2/",
-                                "https://swapi.py4e.com/api/species/3/",
-                                "https://swapi.py4e.com/api/species/4/",
-                                "https://swapi.py4e.com/api/species/5/"
-                              ],
-                              "created": "2014-12-10T14:23:31.880000Z",
-                              "edited": "2014-12-20T19:49:45.256000Z",
-                              "url": "https://swapi.py4e.com/api/films/1/"
-	                        }'}}</p>
+                           <p>{{'
+								Director: George Lucas
+                               Producter: Gary Kurtz, Rick McCallum
+                                Release_date: 1977-05-25
+								<!-- Opening_crawl:   -->
+								Opening_crawl:A long time ago in a galaxy far, far away ... These are times of civil war. Rebel ships have attacked from a secret base and obtained their first victory against the evil Galactic Empire. [...]During the battle, rebel spies managed to steal the secret planes of the Empire's most extreme weapon, the Death Star, an armored space station powerful enough to destroy an entire planet. [...]Pursued by the sinister agents of the Empire, Princess Leia quickly heads to a house in her spaceship, while guarding the blueprints that can save her people and restore freedom in the galaxy ...
+	                    '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -110,66 +39,17 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/the-empire-strikes-back.jpg">
+				     <br>
+                  <span class="card-title grey lighten-4">The Empire Strikes Back Episode 5</span>
                            <figcaption class="trasera">
-                             <p>{{'{"title": "The Empire Strikes Back",
-                                    "episode_id": 5,
-                                    "director": "Irvin Kershner",
-                                    "producer": "Gary Kurtz, Rick McCallum",
-                                    "release_date": "1980-05-17",
-                                    "characters": [
-                                    "https://swapi.py4e.com/api/people/1/",
-                                    "https://swapi.py4e.com/api/people/2/",
-                                    "https://swapi.py4e.com/api/people/3/",
-                                    "https://swapi.py4e.com/api/people/4/",
-                                    "https://swapi.py4e.com/api/people/5/",
-                                    "https://swapi.py4e.com/api/people/10/",
-                                    "https://swapi.py4e.com/api/people/13/",
-                                    "https://swapi.py4e.com/api/people/14/",
-                                    "https://swapi.py4e.com/api/people/18/",
-                                    "https://swapi.py4e.com/api/people/20/",
-                                    "https://swapi.py4e.com/api/people/21/",
-                                    "https://swapi.py4e.com/api/people/22/",
-                                    "https://swapi.py4e.com/api/people/23/",
-                                    "https://swapi.py4e.com/api/people/24/",
-                                    "https://swapi.py4e.com/api/people/25/",
-                                    "https://swapi.py4e.com/api/people/26/"
-                                  ],
-                                  "planets": [
-                                    "https://swapi.py4e.com/api/planets/4/",
-                                    "https://swapi.py4e.com/api/planets/5/",
-                                    "https://swapi.py4e.com/api/planets/6/",
-                                    "https://swapi.py4e.com/api/planets/27/"
-                                  ],
-                                  "starships": [
-                                    "https://swapi.py4e.com/api/starships/3/",
-                                    "https://swapi.py4e.com/api/starships/10/",
-                                    "https://swapi.py4e.com/api/starships/11/",
-                                    "https://swapi.py4e.com/api/starships/12/",
-                                    "https://swapi.py4e.com/api/starships/15/",
-                                    "https://swapi.py4e.com/api/starships/17/",
-                                    "https://swapi.py4e.com/api/starships/21/",
-                                    "https://swapi.py4e.com/api/starships/22/",
-                                    "https://swapi.py4e.com/api/starships/23/"
-                                  ],
-                                  "vehicles": [
-                                    "https://swapi.py4e.com/api/vehicles/8/",
-                                    "https://swapi.py4e.com/api/vehicles/14/",
-                                    "https://swapi.py4e.com/api/vehicles/16/",
-                                    "https://swapi.py4e.com/api/vehicles/18/",
-                                    "https://swapi.py4e.com/api/vehicles/19/",
-                                    "https://swapi.py4e.com/api/vehicles/20/"
-                                  ],
-                                  "species": [
-                                    "https://swapi.py4e.com/api/species/1/",
-                                    "https://swapi.py4e.com/api/species/2/",
-                                    "https://swapi.py4e.com/api/species/3/",
-                                    "https://swapi.py4e.com/api/species/6/",
-                                    "https://swapi.py4e.com/api/species/7/"
-                                  ],
-                                  "created": "2014-12-12T11:26:24.656000Z",
-                                  "edited": "2014-12-15T13:07:53.386000Z",
-                                  "url": "https://swapi.py4e.com/api/films/2/"
-                               }'}}</p>
+                             <p>{{'
+                                    Director: Irvin Kershner
+                                    Producter: Gary Kurtz, Rick McCallum
+                                    Release_date: 1980-05-17
+									<!-- Opening_crawl: 
+                                     -->
+									 Opening_crawl:Long ago in a galaxy far, far away ... It is a dark time for the Rebellion.Although the Death Star has been destroyed, the Imperial troops have forced the rebel forces to leave their secret bases and have pursued them across the galaxy. [...] In an escape from the dreaded Imperial Fleet, a group of rebel warriors led by Luke Skywalker has established a new secret base in the remote frozen land of Hoth. [...] Darth Vader, Lord of Evil, obsessed with finding the young Skywalker, has dispatched thousands of remote-controlled probes into far space ...
+                               '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -178,80 +58,17 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/return-of-the-jedi.jpg">
+				 				     <br>
+                  <span class="card-title grey lighten-4">Return of the Jedi Episode 6</span>
                            <figcaption class="trasera">
-                             <p>{{'{ "title": "Return of the Jedi",
-                                     "episode_id": 6,
-                                     "director": "Richard Marquand",
-                                     "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
-                                     "release_date": "1983-05-25",
-                                     "characters": [
-                                     "https://swapi.py4e.com/api/people/1/",
-                                     "https://swapi.py4e.com/api/people/2/",
-                                     "https://swapi.py4e.com/api/people/3/",
-                                     "https://swapi.py4e.com/api/people/4/",
-                                     "https://swapi.py4e.com/api/people/5/",
-                                     "https://swapi.py4e.com/api/people/10/",
-                                     "https://swapi.py4e.com/api/people/13/",
-                                     "https://swapi.py4e.com/api/people/14/",
-                                     "https://swapi.py4e.com/api/people/16/",
-                                     "https://swapi.py4e.com/api/people/18/",
-                                     "https://swapi.py4e.com/api/people/20/",
-                                     "https://swapi.py4e.com/api/people/21/",
-                                     "https://swapi.py4e.com/api/people/22/",
-                                     "https://swapi.py4e.com/api/people/25/",
-                                     "https://swapi.py4e.com/api/people/27/",
-                                     "https://swapi.py4e.com/api/people/28/",
-                                     "https://swapi.py4e.com/api/people/29/",
-                                     "https://swapi.py4e.com/api/people/30/",
-                                     "https://swapi.py4e.com/api/people/31/",
-                                     "https://swapi.py4e.com/api/people/45/"
-									 ],
-                                   "planets": [
-                                   "https://swapi.py4e.com/api/planets/1/",
-                                   "https://swapi.py4e.com/api/planets/5/",
-                                   "https://swapi.py4e.com/api/planets/7/",
-                                   "https://swapi.py4e.com/api/planets/8/",
-                                   "https://swapi.py4e.com/api/planets/9/"
-                                 ],
-                                "starships": [
-                                  "https://swapi.py4e.com/api/starships/2/",
-                                  "https://swapi.py4e.com/api/starships/3/",
-                                  "https://swapi.py4e.com/api/starships/10/",
-                                  "https://swapi.py4e.com/api/starships/11/",
-                                  "https://swapi.py4e.com/api/starships/12/",
-                                  "https://swapi.py4e.com/api/starships/15/",
-                                  "https://swapi.py4e.com/api/starships/17/",
-                                  "https://swapi.py4e.com/api/starships/22/",
-                                  "https://swapi.py4e.com/api/starships/23/",
-                                  "https://swapi.py4e.com/api/starships/27/",
-                                  "https://swapi.py4e.com/api/starships/28/",
-                                  "https://swapi.py4e.com/api/starships/29/"
-                                ],
-                                "vehicles": [
-                                  "https://swapi.py4e.com/api/vehicles/8/",
-                                  "https://swapi.py4e.com/api/vehicles/16/",
-                                  "https://swapi.py4e.com/api/vehicles/18/",
-                                  "https://swapi.py4e.com/api/vehicles/19/",
-                                  "https://swapi.py4e.com/api/vehicles/24/",
-                                  "https://swapi.py4e.com/api/vehicles/25/",
-                                  "https://swapi.py4e.com/api/vehicles/26/",
-                                  "https://swapi.py4e.com/api/vehicles/30/"
-                                ],
-                                "species": [
-                                  "https://swapi.py4e.com/api/species/1/",
-                                  "https://swapi.py4e.com/api/species/2/",
-                                  "https://swapi.py4e.com/api/species/3/",
-                                  "https://swapi.py4e.com/api/species/5/",
-                                  "https://swapi.py4e.com/api/species/6/",
-                                  "https://swapi.py4e.com/api/species/8/",
-                                  "https://swapi.py4e.com/api/species/9/",
-                                  "https://swapi.py4e.com/api/species/10/",
-                                  "https://swapi.py4e.com/api/species/15/"
-                                ],
-                                "created": "2014-12-18T10:39:33.255000Z",
-                                "edited": "2014-12-20T09:48:37.462000Z",
-                                "url": "https://swapi.py4e.com/api/films/3/"
-                              }'}}</p>
+                             <p>{{'
+                                   Director: Richard Marquand
+                                     Producter: Howard G. Kazanjian, George Lucas, Rick McCallum
+                                     Release_date: 1983-05-25
+                                     <!-- Opening_crawl:
+									  -->
+									  Opening_crawl:A long time ago in a galaxy far, far [...] away, Luke Skywalker has returned to Tatooine, his home planet, in an attempt to rescue his friend Han Solo from the clutches of vile Jabba. [...]  Luke does not know that the Galactic Empire has secretly started the construction of a new armored space station, even more powerful than the first and feared Death Star. [...] Once completed, this extreme weapon will augur certain death for the small group of rebels fighting to restore freedom in the galaxy ...
+                              '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -260,95 +77,17 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/the-phantom-menace.jpg">
+				      <br>
+                  <span class="card-title grey lighten-4">The Phantom Menace Episode 1</span>
                            <figcaption class="trasera">
-                             <p>{{'{ "title": "The Phantom Menace",
-    "episode_id": 1,
-   "director": "George Lucas",
-    "producer": "Rick McCallum",
-    "release_date": "1999-05-19",
-    "characters": [
-      "https://swapi.py4e.com/api/people/2/",
-      "https://swapi.py4e.com/api/people/3/",
-      "https://swapi.py4e.com/api/people/10/",
-      "https://swapi.py4e.com/api/people/11/",
-      "https://swapi.py4e.com/api/people/16/",
-      "https://swapi.py4e.com/api/people/20/",
-      "https://swapi.py4e.com/api/people/21/",
-      "https://swapi.py4e.com/api/people/32/",
-      "https://swapi.py4e.com/api/people/33/",
-      "https://swapi.py4e.com/api/people/34/",
-      "https://swapi.py4e.com/api/people/35/",
-      "https://swapi.py4e.com/api/people/36/",
-      "https://swapi.py4e.com/api/people/37/",
-      "https://swapi.py4e.com/api/people/38/",
-      "https://swapi.py4e.com/api/people/39/",
-      "https://swapi.py4e.com/api/people/40/",
-      "https://swapi.py4e.com/api/people/41/",
-      "https://swapi.py4e.com/api/people/42/",
-      "https://swapi.py4e.com/api/people/43/",
-      "https://swapi.py4e.com/api/people/44/",
-      "https://swapi.py4e.com/api/people/46/",
-      "https://swapi.py4e.com/api/people/47/",
-      "https://swapi.py4e.com/api/people/48/",
-      "https://swapi.py4e.com/api/people/49/",
-      "https://swapi.py4e.com/api/people/50/",
-      "https://swapi.py4e.com/api/people/51/",
-      "https://swapi.py4e.com/api/people/52/",
-      "https://swapi.py4e.com/api/people/53/",
-      "https://swapi.py4e.com/api/people/54/",
-      "https://swapi.py4e.com/api/people/55/",
-      "https://swapi.py4e.com/api/people/56/",
-      "https://swapi.py4e.com/api/people/57/",
-      "https://swapi.py4e.com/api/people/58/",
-      "https://swapi.py4e.com/api/people/59/"
-    ],
-    "planets": [
-      "https://swapi.py4e.com/api/planets/1/",
-      "https://swapi.py4e.com/api/planets/8/",
-      "https://swapi.py4e.com/api/planets/9/"
-    ],
-    "starships": [
-      "https://swapi.py4e.com/api/starships/31/",
-      "https://swapi.py4e.com/api/starships/32/",
-      "https://swapi.py4e.com/api/starships/39/",
-      "https://swapi.py4e.com/api/starships/40/",
-      "https://swapi.py4e.com/api/starships/41/"
-    ],
-    "vehicles": [
-      "https://swapi.py4e.com/api/vehicles/33/",
-      "https://swapi.py4e.com/api/vehicles/34/",
-      "https://swapi.py4e.com/api/vehicles/35/",
-      "https://swapi.py4e.com/api/vehicles/36/",
-      "https://swapi.py4e.com/api/vehicles/37/",
-      "https://swapi.py4e.com/api/vehicles/38/",
-      "https://swapi.py4e.com/api/vehicles/42/"
-    ],
-    "species": [
-      "https://swapi.py4e.com/api/species/1/",
-      "https://swapi.py4e.com/api/species/2/",
-      "https://swapi.py4e.com/api/species/6/",
-      "https://swapi.py4e.com/api/species/11/",
-      "https://swapi.py4e.com/api/species/12/",
-      "https://swapi.py4e.com/api/species/13/",
-      "https://swapi.py4e.com/api/species/14/",
-      "https://swapi.py4e.com/api/species/15/",
-      "https://swapi.py4e.com/api/species/16/",
-      "https://swapi.py4e.com/api/species/17/",
-      "https://swapi.py4e.com/api/species/18/",
-      "https://swapi.py4e.com/api/species/19/",
-      "https://swapi.py4e.com/api/species/20/",
-      "https://swapi.py4e.com/api/species/21/",
-      "https://swapi.py4e.com/api/species/22/",
-      "https://swapi.py4e.com/api/species/23/",
-      "https://swapi.py4e.com/api/species/24/",
-      "https://swapi.py4e.com/api/species/25/",
-      "https://swapi.py4e.com/api/species/26/",
-      "https://swapi.py4e.com/api/species/27/"
-    ],
-    "created": "2014-12-19T16:52:55.740000Z",
-    "edited": "2014-12-20T10:54:07.216000Z",
-    "url": "https://swapi.py4e.com/api/films/4/"
-  }'}}</p>
+                             <p>{{'
+							     Director: George Lucas
+                                 Producter: Rick McCallum
+                                 Release_date: 1999-05-19
+                             <!--  Opening_crawl:
+							   -->
+							   Opening_crawl:A long time ago in a galaxy far, far away [...] The Galactic Republic is in turmoil.There are protests against the taxation of trade routes to star systems. [...] Hoping to solve the problem with a deadly cruise ship blockade, the greedy Trade Federation has halted all shipments to the small planet of Naboo. [...] As the Congress of the Republic endlessly debates this alarming chain of events, the Supreme Chancellor has secretly dispatched two Jedi Knights, the guardians of peace and justice in the galaxy, to resolve the conflict ...
+							  '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -357,105 +96,17 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/attack-of-the-clones.jpg">
+				  <br>
+                  <span class="card-title grey lighten-4"> Attack of the Clones Episode 2</span>
                            <figcaption class="trasera">
-                             <p>{{'{"title": "Attack of the Clones",
-    "episode_id": 2,
-   "director": "George Lucas",
-    "producer": "Rick McCallum",
-    "release_date": "2002-05-16",
-    "characters": [
-      "https://swapi.py4e.com/api/people/2/",
-      "https://swapi.py4e.com/api/people/3/",
-      "https://swapi.py4e.com/api/people/6/",
-      "https://swapi.py4e.com/api/people/7/",
-      "https://swapi.py4e.com/api/people/10/",
-      "https://swapi.py4e.com/api/people/11/",
-      "https://swapi.py4e.com/api/people/20/",
-      "https://swapi.py4e.com/api/people/21/",
-      "https://swapi.py4e.com/api/people/22/",
-      "https://swapi.py4e.com/api/people/33/",
-      "https://swapi.py4e.com/api/people/35/",
-      "https://swapi.py4e.com/api/people/36/",
-      "https://swapi.py4e.com/api/people/40/",
-      "https://swapi.py4e.com/api/people/43/",
-      "https://swapi.py4e.com/api/people/46/",
-      "https://swapi.py4e.com/api/people/51/",
-      "https://swapi.py4e.com/api/people/52/",
-      "https://swapi.py4e.com/api/people/53/",
-      "https://swapi.py4e.com/api/people/58/",
-      "https://swapi.py4e.com/api/people/59/",
-      "https://swapi.py4e.com/api/people/60/",
-      "https://swapi.py4e.com/api/people/61/",
-      "https://swapi.py4e.com/api/people/62/",
-      "https://swapi.py4e.com/api/people/63/",
-      "https://swapi.py4e.com/api/people/64/",
-      "https://swapi.py4e.com/api/people/65/",
-      "https://swapi.py4e.com/api/people/66/",
-      "https://swapi.py4e.com/api/people/67/",
-      "https://swapi.py4e.com/api/people/68/",
-      "https://swapi.py4e.com/api/people/69/",
-      "https://swapi.py4e.com/api/people/70/",
-      "https://swapi.py4e.com/api/people/71/",
-      "https://swapi.py4e.com/api/people/72/",
-      "https://swapi.py4e.com/api/people/73/",
-      "https://swapi.py4e.com/api/people/74/",
-      "https://swapi.py4e.com/api/people/75/",
-      "https://swapi.py4e.com/api/people/76/",
-      "https://swapi.py4e.com/api/people/77/",
-      "https://swapi.py4e.com/api/people/78/",
-      "https://swapi.py4e.com/api/people/82/"
-    ],
-    "planets": [
-      "https://swapi.py4e.com/api/planets/1/",
-      "https://swapi.py4e.com/api/planets/8/",
-      "https://swapi.py4e.com/api/planets/9/",
-      "https://swapi.py4e.com/api/planets/10/",
-      "https://swapi.py4e.com/api/planets/11/"
-    ],
-    "starships": [
-      "https://swapi.py4e.com/api/starships/21/",
-      "https://swapi.py4e.com/api/starships/32/",
-      "https://swapi.py4e.com/api/starships/39/",
-      "https://swapi.py4e.com/api/starships/43/",
-      "https://swapi.py4e.com/api/starships/47/",
-      "https://swapi.py4e.com/api/starships/48/",
-      "https://swapi.py4e.com/api/starships/49/",
-      "https://swapi.py4e.com/api/starships/52/",
-      "https://swapi.py4e.com/api/starships/58/"
-    ],
-    "vehicles": [
-      "https://swapi.py4e.com/api/vehicles/4/",
-      "https://swapi.py4e.com/api/vehicles/44/",
-      "https://swapi.py4e.com/api/vehicles/45/",
-      "https://swapi.py4e.com/api/vehicles/46/",
-      "https://swapi.py4e.com/api/vehicles/50/",
-      "https://swapi.py4e.com/api/vehicles/51/",
-      "https://swapi.py4e.com/api/vehicles/53/",
-      "https://swapi.py4e.com/api/vehicles/54/",
-      "https://swapi.py4e.com/api/vehicles/55/",
-      "https://swapi.py4e.com/api/vehicles/56/",
-      "https://swapi.py4e.com/api/vehicles/57/"
-    ],
-    "species": [
-      "https://swapi.py4e.com/api/species/1/",
-      "https://swapi.py4e.com/api/species/2/",
-      "https://swapi.py4e.com/api/species/6/",
-      "https://swapi.py4e.com/api/species/12/",
-      "https://swapi.py4e.com/api/species/13/",
-      "https://swapi.py4e.com/api/species/15/",
-      "https://swapi.py4e.com/api/species/28/",
-      "https://swapi.py4e.com/api/species/29/",
-      "https://swapi.py4e.com/api/species/30/",
-      "https://swapi.py4e.com/api/species/31/",
-      "https://swapi.py4e.com/api/species/32/",
-      "https://swapi.py4e.com/api/species/33/",
-      "https://swapi.py4e.com/api/species/34/",
-      "https://swapi.py4e.com/api/species/35/"
-    ],
-    "created": "2014-12-20T10:57:57.886000Z",
-    "edited": "2014-12-20T20:18:48.516000Z",
-    "url": "https://swapi.py4e.com/api/films/5/"
-	}'}}</p>
+                             <p>{{'
+                                  Director: George Lucas
+                                  Producter: Rick McCallum
+                                  Release_date: 2002-05-16
+                                  <!-- Opening_crawl:
+								   -->
+								   Opening_crawl:A long time ago, in a galaxy far, far away ... There is unease in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic ... The separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy ... Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of forming an ARMY OF THE REPUBLIC to aid the overwhelmed Jedi ...
+								   '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -464,118 +115,17 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/revenge-of-the-sith.jpg">
+				  <br>
+                  <span class="card-title grey lighten-4">Revenge of the Sith Episode 3</span>
                            <figcaption class="trasera">
-                             <p>{{'{"title": "Revenge of the Sith",
-    "episode_id": 3,
-    "director": "George Lucas",
-    "producer": "Rick McCallum",
-    "release_date": "2005-05-19",
-    "characters": [
-      "https://swapi.py4e.com/api/people/1/",
-      "https://swapi.py4e.com/api/people/2/",
-      "https://swapi.py4e.com/api/people/3/",
-      "https://swapi.py4e.com/api/people/4/",
-      "https://swapi.py4e.com/api/people/5/",
-      "https://swapi.py4e.com/api/people/6/",
-      "https://swapi.py4e.com/api/people/7/",
-      "https://swapi.py4e.com/api/people/10/",
-      "https://swapi.py4e.com/api/people/11/",
-      "https://swapi.py4e.com/api/people/12/",
-      "https://swapi.py4e.com/api/people/13/",
-      "https://swapi.py4e.com/api/people/20/",
-      "https://swapi.py4e.com/api/people/21/",
-      "https://swapi.py4e.com/api/people/33/",
-      "https://swapi.py4e.com/api/people/35/",
-      "https://swapi.py4e.com/api/people/46/",
-      "https://swapi.py4e.com/api/people/51/",
-      "https://swapi.py4e.com/api/people/52/",
-      "https://swapi.py4e.com/api/people/53/",
-      "https://swapi.py4e.com/api/people/54/",
-      "https://swapi.py4e.com/api/people/55/",
-      "https://swapi.py4e.com/api/people/56/",
-      "https://swapi.py4e.com/api/people/58/",
-      "https://swapi.py4e.com/api/people/63/",
-      "https://swapi.py4e.com/api/people/64/",
-      "https://swapi.py4e.com/api/people/67/",
-      "https://swapi.py4e.com/api/people/68/",
-      "https://swapi.py4e.com/api/people/75/",
-      "https://swapi.py4e.com/api/people/78/",
-      "https://swapi.py4e.com/api/people/79/",
-      "https://swapi.py4e.com/api/people/80/",
-      "https://swapi.py4e.com/api/people/81/",
-      "https://swapi.py4e.com/api/people/82/",
-      "https://swapi.py4e.com/api/people/83/"
-    ],
-    "planets": [
-      "https://swapi.py4e.com/api/planets/1/",
-      "https://swapi.py4e.com/api/planets/2/",
-      "https://swapi.py4e.com/api/planets/5/",
-      "https://swapi.py4e.com/api/planets/8/",
-      "https://swapi.py4e.com/api/planets/9/",
-      "https://swapi.py4e.com/api/planets/12/",
-      "https://swapi.py4e.com/api/planets/13/",
-      "https://swapi.py4e.com/api/planets/14/",
-      "https://swapi.py4e.com/api/planets/15/",
-      "https://swapi.py4e.com/api/planets/16/",
-      "https://swapi.py4e.com/api/planets/17/",
-      "https://swapi.py4e.com/api/planets/18/",
-      "https://swapi.py4e.com/api/planets/19/"
-    ],
-    "starships": [
-      "https://swapi.py4e.com/api/starships/2/",
-      "https://swapi.py4e.com/api/starships/32/",
-      "https://swapi.py4e.com/api/starships/48/",
-      "https://swapi.py4e.com/api/starships/59/",
-      "https://swapi.py4e.com/api/starships/61/",
-      "https://swapi.py4e.com/api/starships/63/",
-      "https://swapi.py4e.com/api/starships/64/",
-      "https://swapi.py4e.com/api/starships/65/",
-      "https://swapi.py4e.com/api/starships/66/",
-      "https://swapi.py4e.com/api/starships/68/",
-      "https://swapi.py4e.com/api/starships/74/",
-      "https://swapi.py4e.com/api/starships/75/"
-    ],
-    "vehicles": [
-      "https://swapi.py4e.com/api/vehicles/33/",
-      "https://swapi.py4e.com/api/vehicles/50/",
-      "https://swapi.py4e.com/api/vehicles/53/",
-      "https://swapi.py4e.com/api/vehicles/56/",
-      "https://swapi.py4e.com/api/vehicles/60/",
-      "https://swapi.py4e.com/api/vehicles/62/",
-      "https://swapi.py4e.com/api/vehicles/67/",
-      "https://swapi.py4e.com/api/vehicles/69/",
-      "https://swapi.py4e.com/api/vehicles/70/",
-      "https://swapi.py4e.com/api/vehicles/71/",
-      "https://swapi.py4e.com/api/vehicles/72/",
-      "https://swapi.py4e.com/api/vehicles/73/",
-      "https://swapi.py4e.com/api/vehicles/76/"
-    ],
-    "species": [
-      "https://swapi.py4e.com/api/species/1/",
-      "https://swapi.py4e.com/api/species/2/",
-      "https://swapi.py4e.com/api/species/3/",
-      "https://swapi.py4e.com/api/species/6/",
-      "https://swapi.py4e.com/api/species/15/",
-      "https://swapi.py4e.com/api/species/19/",
-      "https://swapi.py4e.com/api/species/20/",
-      "https://swapi.py4e.com/api/species/23/",
-      "https://swapi.py4e.com/api/species/24/",
-      "https://swapi.py4e.com/api/species/25/",
-      "https://swapi.py4e.com/api/species/26/",
-      "https://swapi.py4e.com/api/species/27/",
-      "https://swapi.py4e.com/api/species/28/",
-      "https://swapi.py4e.com/api/species/29/",
-      "https://swapi.py4e.com/api/species/30/",
-      "https://swapi.py4e.com/api/species/33/",
-      "https://swapi.py4e.com/api/species/34/",
-      "https://swapi.py4e.com/api/species/35/",
-      "https://swapi.py4e.com/api/species/36/",
-      "https://swapi.py4e.com/api/species/37/"
-    ],
-    "created": "2014-12-20T18:49:38.403000Z",
-    "edited": "2014-12-20T20:47:52.073000Z",
-    "url": "https://swapi.py4e.com/api/films/6/"
-	}'}}</p>
+                             <p>{{'
+                                  Director: George Lucas
+                                  Producter: Rick McCallum
+                                  Release_date: 2005-05-19
+                                 <!--  Opening_crawl:
+								   -->
+								   Opening_crawl:A long time ago in a galaxy far, far away [...] War! The Republic falls apart under the attacks of the ruthless Count Dooku, lord of the Sith.There are heroes on both sides. Evil is everywhere. [...] In a bold move, the fiendish droid leader, General Grievous, has entered the Republic capital and kidnapped Chancellor Palpatine, leader of the Galactic Senate. [...] As the Separatist Droid Army tries to flee the embattled capital with its valuable hostage, two Jedi Knights lead a desperate mission to rescue the captive Chancellor ... 
+								  '}}</p>
                            </figcaption>
                 </figure>
             </a>
@@ -584,41 +134,51 @@
             <a href="#">
                 <figure>
                  <img class= "responsive-img movie-img" src="./assets/imgMovie/the-force-awakens.jpg">
+				  <br>
+                  <span class="card-title grey lighten-4">The Force Awakens Episode 7</span>
                            <figcaption class="trasera">
-                             <p>{{'{"title": "The Force Awakens",
-    "episode_id": 7,
-    "director": "J. J. Abrams",
-    "producer": "Kathleen Kennedy, J. J. Abrams, Bryan Burk",
-    "release_date": "2015-12-11",
-    "characters": [
-      "https://swapi.py4e.com/api/people/1/",
-      "https://swapi.py4e.com/api/people/3/",
-      "https://swapi.py4e.com/api/people/5/",
-      "https://swapi.py4e.com/api/people/13/",
-      "https://swapi.py4e.com/api/people/14/",
-      "https://swapi.py4e.com/api/people/27/",
-      "https://swapi.py4e.com/api/people/84/",
-      "https://swapi.py4e.com/api/people/85/",
-      "https://swapi.py4e.com/api/people/86/",
-      "https://swapi.py4e.com/api/people/87/",
-      "https://swapi.py4e.com/api/people/88/"
-    ],
-    "planets": [
-      "https://swapi.py4e.com/api/planets/61/"
-    ],
-    "starships": [
-      "https://swapi.py4e.com/api/starships/10/"
-    ],
-    "vehicles": [],
-    "species": [
-      "https://swapi.py4e.com/api/species/1/",
-      "https://swapi.py4e.com/api/species/2/",
-      "https://swapi.py4e.com/api/species/3/"
-    ],
-    "created": "2015-04-17T06:51:30.504780Z",
-    "edited": "2015-12-17T14:31:47.617768Z",
-    "url": "https://swapi.py4e.com/api/films/7/"
-                               }'}}</p>
+							 <p>{{'
+							      Director: J. J. Abrams,
+                                  Producter:Kathleen Kennedy, J. J. Abrams,Bryan Burk
+                                  Release_date: 2015-12-18
+							<!-- Opening_crawl:  
+							  -->
+							  Opening_crawl:A long time ago in a galaxy far, far away, [...] Luke Skywalker has disappeared.In his absence, the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed. [...] With the support of the REPUBLIC, General Leia Organa leads a brave RESISTANCE. She desperately searches for her brother Luke in order to enlist their help in restoring peace and justice in the galaxy. [...]Leia has sent her boldest pilot on a secret mission to Jakku, where an old ally has uncovered a clue to Luke's whereabouts ...
+							  '}}</p>
+                           </figcaption>
+                </figure>
+            </a>
+        </div>
+		 <div class="contenedor_tarjeta"> 
+            <a href="#">
+                <figure>
+                 <img class= "responsive-img movie-img" src="./assets/imgMovie/the-last-jedi.jpg">
+				                  <br>
+                  <span class="card-title grey lighten-4">The Last Jedi Episode 8</span>
+                           <figcaption class="trasera">
+                           <p>{{'
+							      Director: Rian Johnson
+                                  Producter: Kathleen Kennedy, Ram Bergman
+                                  Release_date: 2017-12-15
+								  Opening_crawl: A long time ago in a galaxy far, far away [...] The FIRST ORDER reigns. After decimating the peaceful Republic, Supreme Leader Snoke now sends his ruthless legions to take military control of the galaxy. [...] Only General Leia Organa and her group of RESISTANCE fighters oppose the mounting tyranny, convinced that Jedi Master Luke Skywalker will return and restore the spark of hope in the fight. [...] But the Resistance has been exposed. As the First Order heads towards the rebel base, the brave heroes organize a desperate escape ...
+							 '}}</p>
+                           </figcaption>
+                </figure>
+            </a>
+        </div>
+		   <div class="contenedor_tarjeta"> 
+            <a href="#">
+                <figure>
+                 <img class= "responsive-img movie-img" src="./assets/imgMovie/the-rise-of-skywalker.jpg">
+                 <br>
+                 <span class="card-title grey lighten-4">The Rise of Skywalker Episode 9</span>  
+                 <figcaption class="trasera">
+                             <p>{{'
+							       Director: J.J. Abrams
+                                   Producter:Kathleen Kennedy,J. J. Abrams,Michelle Rejwan
+                                   Release_date:  2019-12-20
+								   Opening_crawl:A long time ago in a galaxy far, far away ... The dead speak! The galaxy has heard a mysterious broadcast, a threat of REVENGE in the sinister voice of the late EMPEROR PALPATINE. [...] GENERAL LEIA ORGANA sends secret agents to gather intelligence, while REY, the last hope of the Jedi, trains for the battle against the diabolical FIRST ORDER. [...] Meanwhile, Supreme Leader KYLO REN Enraged in search of the Ghost Emperor, determined to destroy any threat to his power ...
+								   '}}</p>
                            </figcaption>
                 </figure>
             </a>
