@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
 export class PeopleService {
   constructor(private http: HttpClient) {}
 
-  URL = "https://swapi.py4e.com/api/people/";
+  URL = 'https://swapi.py4e.com/api/people/';
   /**
    * /people/ -> get all the people resources
    * /people/:id/ -> get a specific people resource
@@ -16,15 +16,16 @@ export class PeopleService {
    * name -> Search Fields
    */
 
-  getAllPeople() {
-    return this.http.get(this.URL);
+  getDataByURL( url ) {
+    return this.http.get(url);
   }
 
   getPeopleById(id: number) {
     return this.http.get(`${this.URL}${id}`);
   }
 
-  getNextPage(nextUrl: string) {
+  getAllPeople(nextUrl: string) {
+    nextUrl = nextUrl !== '' ? nextUrl : this.URL;
     return this.http.get(`${nextUrl}`);
   }
 }
