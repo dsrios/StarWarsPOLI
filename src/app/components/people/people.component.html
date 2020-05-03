@@ -1,6 +1,23 @@
-<app-loader *ngIf="peopleResults.length === 0; else dataRender"></app-loader>
+<app-loader *ngIf="!allDataCompleted; else dataRender"></app-loader>
 <ng-template #dataRender>
-    <pre>
-        {{ peopleResults  | json}}
-    </pre>
+
+    <div class="grid-container">
+        <div *ngFor="let people of allPeopleResults[page]"> 
+            <app-card [datos]="people"></app-card>
+        </div>
+    </div>
+    <div class="paginador">
+        <button 
+            mat-raised-button 
+            (click)="page = page > 0 ? page - 1 : 0" 
+            [disabled]="page === 0"
+            >Anterior</button>
+        <button 
+            mat-raised-button color="accent" 
+            (click)="page = page < allPeopleResults.length - 1 ? page + 1 : allPeopleResults.length - 1" 
+            [disabled]="page === allPeopleResults.length - 1"
+            >Siguiente</button>
+    </div>
+
 </ng-template>
+
