@@ -1,10 +1,10 @@
 //Servicio films David Orozco
-
 import { Injectable } from "@angular/core";
-/* import { HttpClient } from "@angular/common/http"; */
 import { HttpClient,HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError  } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { MdDialog } from '@angular/material';
+import { Sort } from '@angular/material';
 
 @Injectable()
 // @Injectable({
@@ -21,6 +21,25 @@ export class FilmsService {
    * name -> Search Fields
    */
 
+ /*  getDataByURL( url ) {
+	     return this.http.get(url);
+  return this.http.get(`${this.URL}${id}?format=json`).pipe(
+                catchError(this.handleError)
+              );
+  }
+  
+  getFilmsById(id: number){
+    return this.http.get(`${this.URL}${id}?format=json`).pipe(
+                catchError(this.handleError)
+              );
+  }
+
+getAllFilms(nextUrl: string) {
+    nextUrl = nextUrl !== '' ? nextUrl : this.URL;
+    return this.http.get(`${nextUrl}`);
+  } */
+  
+  
   getAllFilms() {
     return this.http.get(this.URL);
   }
