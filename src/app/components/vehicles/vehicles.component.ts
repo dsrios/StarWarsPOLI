@@ -9,8 +9,11 @@ import { VehiclesService } from 'src/app/shared/services/vehicles.service';
 export class VehiclesComponent implements OnInit {
 
   vehiclesResults: Array<any> = [];
+  imagesVehicles: string[];
 
-  constructor(private vehiclesService: VehiclesService) { }
+  constructor(private vehiclesService: VehiclesService) { 
+    this.imagesVehicles = ['./assets/imagesVehicles/','./assets/imagesVehicles/T-16skyhopper.png'];
+  }
 
   ngOnInit() {
     this.getVehiclesResults();
@@ -25,7 +28,12 @@ export class VehiclesComponent implements OnInit {
     e => console.log('An error => ', e),
     () => {
       setTimeout(() => {
+        debugger;
         this.vehiclesResults = responseInfo;
+        this.vehiclesResults.map((obj) => {
+          debugger;
+          obj.img = './assets/imagesVehicles/'+ obj.name +'.png';
+        });
       }, 500);
     });
   }
