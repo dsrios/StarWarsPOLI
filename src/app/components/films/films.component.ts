@@ -3,7 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmsService } from './../../shared/services/films.service';
 import { Observable } from 'rxjs';
-import { FilmsModel } from '../../../model/films-model';
+/* import { FilmsModel } from './../../films/model/films-model'; */
 
 @Component({
   selector: 'app-films',
@@ -63,7 +63,6 @@ export class FilmsComponent implements OnInit {
     );
   } */
 }
-
 export interface IFilms {
   count?: number;
   next?: string;
