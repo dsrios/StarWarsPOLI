@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './shared/card/card.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CardSpecieComponent } from './shared/card-specie/card-specie.component';
+import { CardFilmsComponent } from './shared/card-films/card-films.component';
 
 // Importar modulos y componentes de material
 import { MatToolbar } from '@angular/material/toolbar';
@@ -61,7 +62,8 @@ import { CardStarshipsComponent } from './shared/card-starships/card-starships.c
     SpeciesComponent,
     CardSpecieComponent,
     StarshipsComponent,
-    CardStarshipsComponent
+    CardStarshipsComponent,
+	CardFilmsComponent
   ],
   imports: [
     BrowserModule,
