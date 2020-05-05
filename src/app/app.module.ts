@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './shared/card/card.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CardSpecieComponent } from './shared/card-specie/card-specie.component';
 
 // Importar modulos y componentes de material
 import { MatToolbar } from '@angular/material/toolbar';
@@ -22,6 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { PeopleComponent } from './components/people/people.component';
 import { FilmsComponent } from './components/films/films.component';
 import { VehiclesComponent} from './components/vehicles/vehicles.component';
+import { SpeciesComponent } from './components/species/species.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 // Agregar el componente de material que se vaya a usar
 const MATERIAL_COMPONENTS = [
@@ -40,6 +43,9 @@ import { FilmsService } from './shared/services/films.service';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 import { VehiclesService } from './shared/services/vehicles.service';
+import { SpeciesService } from './shared/services/species.service';
+import { StarshipsService } from './shared/services/starships.service';
+import { CardStarshipsComponent } from './shared/card-starships/card-starships.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +57,11 @@ import { VehiclesService } from './shared/services/vehicles.service';
     PeopleComponent,
     LoaderComponent,
     PlanetsComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    SpeciesComponent,
+    CardSpecieComponent,
+    StarshipsComponent,
+    CardStarshipsComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +76,9 @@ import { VehiclesService } from './shared/services/vehicles.service';
 providers:[
 PeopleService,
 FilmsService,
-VehiclesService],
+VehiclesService,
+SpeciesService,
+StarshipsService],
  bootstrap: [AppComponent]
 })
 export class AppModule { }
