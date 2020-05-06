@@ -1,3 +1,4 @@
+<div>
 <div class ="contenedor">
 	<div *ngFor="let vehicle of vehiclesResults">
       <div class="contenedor_tarjeta"> 
@@ -48,14 +49,20 @@
                     <label>Clase de vehiculo: </label>
                     {{ vehicle.vehicle_class }}
                   </li>
-                  <li>
-                    <label>Films: </label>
-                    <ul *ngFor="let film of arrayfilms">
-                      <li>{{ film }}</li>
-                    </ul>
-                  </li>
                 </ul>
                            </figcaption>
                 </figure>
-			</div>
+            </div>
+         </div>
+        </div>
+    <div>
+            <section>         
+                <ul class="pagination">
+                   <li><a href="#">1</a></li>
+                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=2">2</a></li>
+                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=3">3</a></li>
+                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=4">4</a></li>
+               </ul>
+        </section>   
+    
         </div>
