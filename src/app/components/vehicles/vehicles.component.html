@@ -55,14 +55,7 @@
             </div>
          </div>
         </div>
-    <div>
-            <section>         
-                <ul class="pagination">
-                   <li><a href="#">1</a></li>
-                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=2">2</a></li>
-                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=3">3</a></li>
-                   <li><a href="http://swapi.py4e.com/api/vehicles/?page=4">4</a></li>
-               </ul>
-        </section>   
-    
+        <div class="paginador">
+        <button mat-raised-button (click)="page = page > 0 ? page - 1 : 0;anterior_pagina()" [disabled]="page === 0">Anterior</button>
+        <button mat-raised-button (click)="page = page < vehiclesResults.length - 1 ? page + 1 : vehiclesResults.length - 1;siguiente_pagina()" [disabled]="page === vehiclesResults.length - 1">Siguiente</button>
         </div>

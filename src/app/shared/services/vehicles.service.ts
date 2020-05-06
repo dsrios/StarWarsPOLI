@@ -23,7 +23,8 @@ export class VehiclesService {
     return this.http.get(`${this.URL}${id}`);
   }
 
-  getNextPage(nextUrl: string) {
-    return this.http.get(`${nextUrl}`);
+  getNextPage(pagina: number) {
+    //ext": "http://swapi.py4e.com/api/vehicles/?page=2"
+    return this.http.get(`${this.URL}?page=${pagina}`);
   }
 }
