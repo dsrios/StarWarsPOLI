@@ -10,6 +10,8 @@ import { CardComponent } from './shared/card/card.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CardSpecieComponent } from './shared/card-specie/card-specie.component';
 import { CardFilmsComponent } from './shared/card-films/card-films.component';
+import { CardStarshipsComponent } from './shared/card-starships/card-starships.component';
+import { CardPlanetsComponent } from './shared/card-planets/card-planets.component';
 
 // Importar modulos y componentes de material
 import { MatToolbar } from '@angular/material/toolbar';
@@ -26,6 +28,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { VehiclesComponent} from './components/vehicles/vehicles.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 
 // Agregar el componente de material que se vaya a usar
 const MATERIAL_COMPONENTS = [
@@ -42,11 +45,10 @@ const MATERIAL_MODULES = [
 import { PeopleService } from './shared/services/people.service';
 import { FilmsService } from './shared/services/films.service';
 import { LoaderComponent } from './shared/loader/loader.component';
-import { PlanetsComponent } from './components/planets/planets.component';
 import { VehiclesService } from './shared/services/vehicles.service';
 import { SpeciesService } from './shared/services/species.service';
 import { StarshipsService } from './shared/services/starships.service';
-import { CardStarshipsComponent } from './shared/card-starships/card-starships.component';
+import { PlanetsService } from './shared/services/planets.service';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,8 @@ import { CardStarshipsComponent } from './shared/card-starships/card-starships.c
     CardSpecieComponent,
     StarshipsComponent,
     CardStarshipsComponent,
-	CardFilmsComponent
+    CardFilmsComponent,
+    CardPlanetsComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ PeopleService,
 FilmsService,
 VehiclesService,
 SpeciesService,
-StarshipsService],
+StarshipsService,
+PlanetsService],
  bootstrap: [AppComponent]
 })
 export class AppModule { }

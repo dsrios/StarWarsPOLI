@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'species', component: SpeciesComponent },
   { path: 'starships', component: StarshipsComponent },
   { path: '',
-    redirectTo: '/films',
+    redirectTo: '/people',
     pathMatch: 'full'
   },
   // { path: '**', component: PageNotFoundComponent }
