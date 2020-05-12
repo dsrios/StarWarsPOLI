@@ -1,22 +1,20 @@
-//Componente films David Orozco nueva version 
-
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilmsComponent } from './films.component';
+import { CardStarshipsComponent } from './card-starships.component';
 
-describe('FilmsComponentt', () => {
-  let component: FilmsComponent;
-  let fixture: ComponentFixture<FilmsComponent>;
+describe('CardStarshipsComponent', () => {
+  let component: CardStarshipsComponent;
+  let fixture: ComponentFixture<CardStarshipsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilmsComponent ]
+      declarations: [ CardStarshipsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilmsComponent);
+    fixture = TestBed.createComponent(CardStarshipsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -25,4 +23,3 @@ describe('FilmsComponentt', () => {
     expect(component).toBeTruthy();
   });
 });
-

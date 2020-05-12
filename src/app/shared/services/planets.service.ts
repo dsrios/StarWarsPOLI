@@ -1,28 +1,25 @@
-//Servicio films David Orozco Nueva version
-
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilmsService {
+export class PlanetsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  URL = 'https://swapi.py4e.com/api/films/';
+  URL = 'https://swapi.py4e.com/api/planets/';
 
   getDataByURL( url ) {
     return this.http.get(url);
   }
 
-  getFilmsById(id: number) {
+  getPlanetsById(id: number) {
     return this.http.get(`${this.URL}${id}`);
   }
 
-  getAllFilms(nextUrl: string) {
+  getAllPlanets(nextUrl: string) {
     nextUrl = nextUrl !== '' ? nextUrl : this.URL;
     return this.http.get(`${nextUrl}`);
   }
 }
-

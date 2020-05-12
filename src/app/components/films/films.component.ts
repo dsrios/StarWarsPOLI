@@ -1,8 +1,7 @@
-//componente films David Orozco
+//componente films David Orozco nueva version
 
 import { Component, OnInit } from '@angular/core';
-import { FilmsService } from './../../shared/services/films.service';
-import { Observable } from 'rxjs';
+import { FilmsService } from '../../shared/services/films.service';
 
 @Component({
   selector: 'app-films',
@@ -11,32 +10,43 @@ import { Observable } from 'rxjs';
 })
 export class FilmsComponent implements OnInit {
 
-  filmsResults: Array<any> = [];
-  /* filmsResults: Observable<Film>=[]; */
+ filmsResults: Array<any> = [];
+ allFilmsResults = [];
+  urlSearch = '';
+  allDataCompleted = false;
+  page = 0;
 
-  constructor( private filmsService: FilmsService ) { }
+  constructor(private filmsService: FilmsService) { }
 
   ngOnInit() {
-    this.getFilmsResults();
+    this.getAllFilms();
+    console.log('Finally script', this.allFilmsResults);
   }
 
-  getFilmsResults() {
-    let responseInfo;
-    this.filmsService.getAllFilms().subscribe( ( response: IFilms) => {
-      console.log('Results => ', response);
-      responseInfo = response.results;
-    },
-    e => console.log('An error => ', e),
-    () => {
-      setTimeout(() => {
-        this.filmsResults = responseInfo;
-      }, 500);
-    });
+  getAllFilms(){
+    let responseInfo: any = [];
+    this.filmsService.getAllFilms(this.urlSearch).subscribe(
+      (response: IFilms) => {
+        responseInfo = response;
+      },
+      (e) => console.log('An error => ', e),
+      () => {
+        if (responseInfo.next !== null) {
+          this.urlSearch = responseInfo.next;
+          this.allFilmsResults.push(responseInfo.results);
+          this.getAllFilms();
+        } else {
+          this.urlSearch = '';
+          this.allFilmsResults.push(responseInfo.results);
+          this.allDataCompleted = true;
+        }
+      }
+    );
   }
 
 }
 
-export interface IFilms {
+export interface IFilms{
   count?: number;
   next?: string;
   previous?: string;

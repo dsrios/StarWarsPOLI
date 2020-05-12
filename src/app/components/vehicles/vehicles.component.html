@@ -1,314 +1,61 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>PELICULAS</title>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-	   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  </head>
-  <body>
-<p>carlos leal</p>
-<app-loader *ngIf="vehiclesResults.length === 0; else dataRender"></app-loader>
-<!--<ng-template #dataRender>
-    <pre>
-        {{ vehiclesResults  | json}}
-    </pre>
-</ng-template> -->
-
+<div>
 <div class ="contenedor">
-    <div class="contenedor_tarjeta"> 
-          <a href="#">
-              <figure>
-               <img class= "responsive-img movie-img" src="./assets/imagesVehicles/SandCrawler.png">
-                   <br>
-                <span class="card-title grey lighten-4">Sand Crawler</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "Sand Crawler", 
-                            "model": "Digger Crawler", 
-                            "manufacturer": "Corellia Mining Corporation", 
-                            "cost_in_credits": "150000", 
-                            "length": "36.8 ", 
-                            "max_atmosphering_speed": "30", 
-                            "crew": "46", 
-                            "passengers": "30", 
-                            "cargo_capacity": "50000", 
-                            "consumables": "2 months", 
-                            "vehicle_class": "wheeled", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/1/", 
-                                "https://swapi.py4e.com/api/films/5/"
-                            ], 
-                            "created": "2014-12-10T15:36:25.724000Z", 
-                            "edited": "2014-12-20T21:30:21.661000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/4/"
-                            '}}</p>
-                         </figcaption>
-              </figure>
-          </a>
-      </div>
+	<div *ngFor="let vehicle of vehiclesResults">
       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/T-16skyhopper.png">
-                 <br>
-              <span class="card-title grey lighten-4">T-16 skyhoppe</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "T-16 skyhopper", 
-                            "model": "T-16 skyhopper", 
-                            "manufacturer": "Incom Corporation", 
-                            "cost_in_credits": "14500", 
-                            "length": "10.4 ", 
-                            "max_atmosphering_speed": "1200", 
-                            "crew": "1", 
-                            "passengers": "1", 
-                            "cargo_capacity": "50", 
-                            "consumables": "0", 
-                            "vehicle_class": "repulsorcraft", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/1/"
-                            ], 
-                            "created": "2014-12-10T16:01:52.434000Z", 
-                            "edited": "2014-12-20T21:30:21.665000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/6/"
-                           '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/X-34landspeeder.png">
-                                  <br>
-              <span class="card-title grey lighten-4">X-34 landspeeder</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "X-34 landspeeder", 
-                            "model": "X-34 landspeeder", 
-                            "manufacturer": "SoroSuub Corporation", 
-                            "cost_in_credits": "10550", 
-                            "length": "3.4 ", 
-                            "max_atmosphering_speed": "250", 
-                            "crew": "1", 
-                            "passengers": "1", 
-                            "cargo_capacity": "5", 
-                            "consumables": "unknown", 
-                            "vehicle_class": "repulsorcraft", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/1/"
-                            ], 
-                            "created": "2014-12-10T16:13:52.586000Z", 
-                            "edited": "2014-12-20T21:30:21.668000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/7/"
-                          '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/TIE_LN starfighter.jpg">
-                  <br>
-              <span class="card-title grey lighten-4">TIE/LN starfighter</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "TIE/LN starfighter", 
-                            "model": "Twin Ion Engine/Ln Starfighter", 
-                            "manufacturer": "Sienar Fleet Systems", 
-                            "cost_in_credits": "unknown", 
-                            "length": "6.4", 
-                            "max_atmosphering_speed": "1200", 
-                            "crew": "1", 
-                            "passengers": "0", 
-                            "cargo_capacity": "65", 
-                            "consumables": "2 days", 
-                            "vehicle_class": "starfighter", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/1/", 
-                                "https://swapi.py4e.com/api/films/2/", 
-                                "https://swapi.py4e.com/api/films/3/"
-                            ], 
-                            "created": "2014-12-10T16:33:52.860000Z", 
-                            "edited": "2014-12-20T21:30:21.670000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/8/"
-                          '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/Snowspeeder.png">
-              <br>
-              <span class="card-title grey lighten-4">Snowspeeder</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "Snowspeeder", 
-                            "model": "t-47 airspeeder", 
-                            "manufacturer": "Incom corporation", 
-                            "cost_in_credits": "unknown", 
-                            "length": "4.5", 
-                            "max_atmosphering_speed": "650", 
-                            "crew": "2", 
-                            "passengers": "0", 
-                            "cargo_capacity": "10", 
-                            "consumables": "none", 
-                            "vehicle_class": "airspeeder", 
-                            "pilots": [
-                                "https://swapi.py4e.com/api/people/1/", 
-                                "https://swapi.py4e.com/api/people/18/"
-                            ], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/2/"
-                            ], 
-                            "created": "2014-12-15T12:22:12Z", 
-                            "edited": "2014-12-20T21:30:21.672000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/14/"
-                               '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/TIEbomber.jpg">
-              <br>
-              <span class="card-title grey lighten-4">TIE bomber</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "TIE bomber", 
-                            "model": "TIE/sa bomber", 
-                            "manufacturer": "Sienar Fleet Systems", 
-                            "cost_in_credits": "unknown", 
-                            "length": "7.8", 
-                            "max_atmosphering_speed": "850", 
-                            "crew": "1", 
-                            "passengers": "0", 
-                            "cargo_capacity": "none", 
-                            "consumables": "2 days", 
-                            "vehicle_class": "space/planetary bomber", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/2/", 
-                                "https://swapi.py4e.com/api/films/3/"
-                            ], 
-                            "created": "2014-12-15T12:33:15.838000Z", 
-                            "edited": "2014-12-20T21:30:21.675000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/16/"
-                              '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/AT-AT.jpg">
-              <br>
-              <span class="card-title grey lighten-4">AT-AT</span>
-                       <figcaption class="trasera">
-                         <p>{{'
-                            "name": "AT-AT", 
-                            "model": "All Terrain Armored Transport", 
-                            "manufacturer": "Kuat Drive Yards, Imperial Department of Military Research", 
-                            "cost_in_credits": "unknown", 
-                            "length": "20", 
-                            "max_atmosphering_speed": "60", 
-                            "crew": "5", 
-                            "passengers": "40", 
-                            "cargo_capacity": "1000", 
-                            "consumables": "unknown", 
-                            "vehicle_class": "assault walker", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/2/", 
-                                "https://swapi.py4e.com/api/films/3/"
-                            ], 
-                            "created": "2014-12-15T12:38:25.937000Z", 
-                            "edited": "2014-12-20T21:30:21.677000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/18/"
-                          '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-     <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/AT-ST.jpg">
-                              <br>
-              <span class="card-title grey lighten-4">AT-ST</span>
-                       <figcaption class="trasera">
-                       <p>{{'
-                        "name": "AT-ST", 
-                        "model": "All Terrain Scout Transport", 
-                        "manufacturer": "Kuat Drive Yards, Imperial Department of Military Research", 
-                        "cost_in_credits": "unknown", 
-                        "length": "2", 
-                        "max_atmosphering_speed": "90", 
-                        "crew": "2", 
-                        "passengers": "0", 
-                        "cargo_capacity": "200", 
-                        "consumables": "none", 
-                        "vehicle_class": "walker", 
-                        "pilots": [
-                            "https://swapi.py4e.com/api/people/13/"
-                        ], 
-                        "films": [
-                            "https://swapi.py4e.com/api/films/2/", 
-                            "https://swapi.py4e.com/api/films/3/"
-                        ], 
-                        "created": "2014-12-15T12:46:42.384000Z", 
-                        "edited": "2014-12-20T21:30:21.679000Z", 
-                        "url": "https://swapi.py4e.com/api/vehicles/19/"
-                         '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-       <div class="contenedor_tarjeta"> 
-        <a href="#">
-            <figure>
-             <img class= "responsive-img movie-img" src="./assets/imagesVehicles/storm.jpg">
-             <br>
-             <span class="card-title grey lighten-4">Storm IV Twin-Pod cloud car</span>  
-             <figcaption class="trasera">
-                         <p>{{'
-                            "name": "Storm IV Twin-Pod cloud car", 
-                            "model": "Storm IV Twin-Pod", 
-                            "manufacturer": "Bespin Motors", 
-                            "cost_in_credits": "75000", 
-                            "length": "7", 
-                            "max_atmosphering_speed": "1500", 
-                            "crew": "2", 
-                            "passengers": "0", 
-                            "cargo_capacity": "10", 
-                            "consumables": "1 day", 
-                            "vehicle_class": "repulsorcraft", 
-                            "pilots": [], 
-                            "films": [
-                                "https://swapi.py4e.com/api/films/2/"
-                            ], 
-                            "created": "2014-12-15T12:58:50.530000Z", 
-                            "edited": "2014-12-20T21:30:21.681000Z", 
-                            "url": "https://swapi.py4e.com/api/vehicles/20/"
-                               '}}</p>
-                       </figcaption>
-            </figure>
-        </a>
-    </div>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-</body>
-</html>
+                <figure>
+				<h3>{{vehicle.name}}</h3>
+                 <img class= "responsive-img movie-img" [src]="vehicle.img">
+				     <br>
+                  <span class="card-title grey lighten-4">{{vehicle.name}}</span>
+                         <figcaption class="trasera">
+               <ul>
+                  <li>
+                    <label>Modelo: </label>
+                    {{ vehicle.model }}
+                  </li>
+                  <li>
+                    <label>Fabricante: </label>
+                    {{ vehicle.manufacturer }}
+                  </li>
+                  <li>
+                    <label>Costo en creditos: </label>
+                    {{ vehicle.cost_in_credits }}
+                  </li>
+                  <li>
+                    <label>Longitud: </label>
+                    {{ vehicle.length }}
+                  </li>
+                  <li>
+                    <label>Maxima velocidad atmosferica: </label>
+                    {{ vehicle.max_atmosphering_speed}}
+                  </li>
+                  <li>
+                    <label>Tripulacion: </label>
+                    {{ vehicle.crew }}
+                  </li>
+                  <li>
+                    <label>Pasajeros: </label>
+                    {{ vehicle.passengers }}
+                  </li>
+                  <li>
+                    <label>Capacidad de carga: </label>
+                    {{ vehicle.cargo_capacity }}
+                  </li>
+                  <li>
+                    <label>Consumibles: </label>
+                    {{ vehicle.consumables }}
+                  </li>
+                  <li>
+                    <label>Clase de vehiculo: </label>
+                    {{ vehicle.vehicle_class }}
+                  </li>
+                </ul>
+                           </figcaption>
+                </figure>
+            </div>
+         </div>
+        </div>
+        <div class="paginador">
+        <button mat-raised-button (click)="page = page > 0 ? page - 1 : 0;anterior_pagina()" [disabled]="page === 0">Anterior</button>
+        <button mat-raised-button (click)="page = page < vehiclesResults.length - 1 ? page + 1 : vehiclesResults.length - 1;siguiente_pagina()" [disabled]="page === vehiclesResults.length - 1">Siguiente</button>
+        </div>

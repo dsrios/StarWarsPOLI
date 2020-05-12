@@ -1,0 +1,14 @@
+<app-loader *ngIf="!allDataCompleted; else dataRender"></app-loader>
+<ng-template #dataRender>
+
+    <div class="grid-container">
+        <div *ngFor="let specie of allSpeciesResults[page]">
+            <app-card-specie [datos]="specie"></app-card-specie>
+        </div>
+    </div>
+    <div class="paginador">
+        <button mat-raised-button (click)="page = page > 0 ? page - 1 : 0" [disabled]="page === 0">Anterior</button>
+        <button mat-raised-button color="accent" (click)="page = page < allSpeciesResults.length - 1 ? page + 1 : allSpeciesResults.length - 1" [disabled]="page === allSpeciesResults.length - 1">Siguiente</button>
+    </div>
+
+</ng-template>

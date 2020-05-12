@@ -1,0 +1,30 @@
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="card-image" [ngStyle]="{'background-image': 'url('+urlImageFind(datos.title)+')'}">
+        </div>
+        <mat-card-title>{{ datos.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="urlImageFind(datos.title)" [alt]="datos.title">
+    <mat-card-content>
+        <ul>
+            <li>
+                <label>Título: </label> {{ datos.title }}
+            </li>
+            <li>
+                <label>Episodio: </label> {{ datos.episode_id}}
+            </li>
+            <li>
+                <label>Director: </label> {{ datos.director }}
+            </li>
+            <li>
+                <label>Productor: </label> {{ datos.producer }}
+            </li>
+            <li>
+                <label>Fecha de lanzamiento: </label> {{ datos.release_date}}
+            </li>
+			 <li>
+                <label> Introducción: </label> {{datos.opening_crawl}}
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

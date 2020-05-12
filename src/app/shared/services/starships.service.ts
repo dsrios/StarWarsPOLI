@@ -1,28 +1,25 @@
-//Servicio films David Orozco Nueva version
-
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilmsService {
+export class StarshipsService {
 
   constructor(private http: HttpClient) { }
 
-  URL = 'https://swapi.py4e.com/api/films/';
+  URL = 'https://swapi.py4e.com/api/starships/';
 
   getDataByURL( url ) {
     return this.http.get(url);
   }
 
-  getFilmsById(id: number) {
+  getStarshipsById(id: number) {
     return this.http.get(`${this.URL}${id}`);
   }
 
-  getAllFilms(nextUrl: string) {
+  getAllStarships(nextUrl: string) {
     nextUrl = nextUrl !== '' ? nextUrl : this.URL;
     return this.http.get(`${nextUrl}`);
   }
 }
-

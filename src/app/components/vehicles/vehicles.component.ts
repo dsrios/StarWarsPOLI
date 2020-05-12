@@ -9,8 +9,13 @@ import { VehiclesService } from 'src/app/shared/services/vehicles.service';
 export class VehiclesComponent implements OnInit {
 
   vehiclesResults: Array<any> = [];
+  imagesVehicles: string[];
+  page =  true;
+  pagina = 1;
 
-  constructor(private vehiclesService: VehiclesService) { }
+  constructor(private vehiclesService: VehiclesService) { 
+    this.imagesVehicles = ['./assets/imagesVehicles/','./assets/imagesVehicles/T-16skyhopper.png'];
+  }
 
   ngOnInit() {
     this.getVehiclesResults();
@@ -18,16 +23,36 @@ export class VehiclesComponent implements OnInit {
 
   getVehiclesResults() {
     let responseInfo;
-    this.vehiclesService.getAllVehicles().subscribe( ( response: IVehicles) => {
+    this.vehiclesService.getNextPage(this.pagina).subscribe( ( response: IVehicles) => {
       console.log('Results => ', response);
       responseInfo = response.results;
     },
     e => console.log('An error => ', e),
     () => {
       setTimeout(() => {
+        
         this.vehiclesResults = responseInfo;
+        this.vehiclesResults.map((obj) => {
+          
+          obj.img = './assets/imagesVehicles/'+ obj.name +'.png';
+        });
       }, 500);
     });
+  }
+
+
+  siguiente_pagina(){
+    console.log(this.pagina);
+    this.pagina=this.pagina+1;
+    console.log("actualizo pagina",this.pagina)
+    this.getVehiclesResults();
+  }
+
+  anterior_pagina(){
+    console.log(this.pagina);
+    this.pagina=this.pagina-1;
+    console.log("actualizo pagina",this.pagina)
+    this.getVehiclesResults();
   }
 
 }

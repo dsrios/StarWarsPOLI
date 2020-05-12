@@ -1,0 +1,30 @@
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="card-image" [ngStyle]="{'background-image': 'url('+urlImageFind(datos.name)+')'}">
+        </div>
+        <mat-card-title>{{ datos.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="urlImageFind(datos.name)" [alt]="datos.name">
+    <mat-card-content>
+        <ul>
+            <li>
+                <label>Clasificación: </label> {{ datos.classification }}
+            </li>
+            <li>
+                <label>Designacion: </label> {{ datos.designation }}
+            </li>
+            <li>
+                <label>Altura: </label> {{ datos.average_height }}
+            </li>
+            <li>
+                <label>Color de piel: </label> {{ datos.skin_colors }}
+            </li>
+            <li>
+                <label>Promedio vida: </label> {{ datos.average_lifespan }}
+            </li>
+            <li>
+                <label>Idioma: </label> {{ datos.language }}
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>
